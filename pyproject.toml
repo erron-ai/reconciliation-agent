@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "reconciliation-agent"
+version = "0.1.0"
+description = "Automated financial reconciliation to match records, flag exceptions, and generate reports."
+readme = "README.md"
+requires-python = ">=3.10"
+license = {text = "MIT"}
+authors = [{name = "erron.ai"}]
+dependencies = []
+
+[project.urls]
+Homepage = "https://github.com/erron-ai/reconciliation-agent"
+Issues = "https://github.com/erron-ai/reconciliation-agent/issues"
+
+[project.scripts]
+reconciliation-agent = "reconciliation_agent.cli:main"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
